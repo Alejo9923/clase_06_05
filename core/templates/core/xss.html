@@ -1,0 +1,13 @@
+<h1>Prueba XSS</h1>
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="contenido" placeholder="Escribe un comentario">
+    <button type="submit">Enviar</button>
+</form>
+
+<h3>Comentarios:</h3>
+{% for c in comentarios %}
+    <!-- El uso de |safe es lo que genera la vulnerabilidad -->
+    <!-- <p>{{ c.contenido|safe }}</p> -->
+     <p>{{ c.contenido|safe }}</p>
+{% endfor %}

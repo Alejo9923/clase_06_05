@@ -1,0 +1,5 @@
+<h1>Prueba CSRF</h1>
+<p>Esta página es vulnerable. Si envías un POST desde un sitio malicioso, se borrarán tus datos.</p>
+<form method="post">
+    {% csrf_token %} <button type="submit" style="background:red; color:white;">BORRAR TODO (Acción Sensible)</button>
+</form>

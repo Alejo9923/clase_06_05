@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab de Seguridad</title>
+    <style>
+        body { font-family: sans-serif; margin: 40px; line-height: 1.6; }
+        .card { border: 1px solid #ccc; padding: 15px; margin-bottom: 10px; border-radius: 8px; }
+        .btn { display: inline-block; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>🛠️ Panel de Pruebas de Seguridad</h1>
+    <div class="card">
+        <h3>1. Cross-Site Scripting (XSS)</h3>
+        <p>Prueba cómo un usuario puede inyectar código JavaScript malicioso.</p>
+        <a href="{% url 'prueba_xss' %}" class="btn">Ir a XSS</a>
+    </div>
+    <div class="card">
+        <h3>2. Cross-Site Request Forgery (CSRF)</h3>
+        <p>Prueba cómo borrar datos sin permiso desde otro sitio.</p>
+        <a href="{% url 'prueba_csrf' %}" class="btn">Ir a CSRF</a>
+    </div>
+    <div class="card">
+        <h3>3. Clickjacking</h3>
+        <p>Prueba cómo engañar al usuario ocultando la web bajo otra capa.</p>
+        <a href="{% url 'prueba_clickjacking' %}" class="btn">Ir a Clickjacking</a>
+    </div>
+</body>
+</html>

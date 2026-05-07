@@ -1,0 +1,4 @@
+estudiar pq se aplica en el proyecto:
+-CSRF
+-XSS
+-Clickjacking
